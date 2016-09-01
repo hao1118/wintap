@@ -20,7 +20,7 @@ func TAP_CONTROL_CODE(request, method uint32) uint32 {
 	return CTL_CODE(34, request, method, 0)
 }
 
-func GetTapGuid() string {
+func GetTapGUID() string {
 	key, err := registry.OpenKey(registry.LOCAL_MACHINE, `SYSTEM\CurrentControlSet\Control\Class\{4D36E972-E325-11CE-BFC1-08002BE10318}`, registry.READ)
 	if err != nil {
 		return ""
